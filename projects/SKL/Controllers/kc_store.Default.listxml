@@ -7,9 +7,10 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>kc_name</OrderBy>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
-    <string>kc_storeid</string>
     <string>kc_name</string>
+    <string>kc_storeid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <SerializedTemplates>
@@ -22,7 +23,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="kc_name">
           <StyleName>primary</StyleName>
-          <Bounds>10,2,302,28</Bounds>
+          <Bounds>10,2,291,28</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
