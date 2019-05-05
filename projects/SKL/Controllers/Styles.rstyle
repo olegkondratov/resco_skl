@@ -893,5 +893,12 @@
         </Property>
       </Properties>
     </Style>
+    <Style Name="primary_center_input" Style="primary" Type="TextCell">
+      <Properties>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Style>
   </Styles>
 </GlobalStyles>

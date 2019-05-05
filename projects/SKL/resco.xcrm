@@ -1,4 +1,4 @@
-﻿<model version="7" publish="23">
+﻿<model version="7" publish="10000">
   <entities>
     <entity schema="account" permissions="768" haslabels="true" xattr="768">
       <properties>
@@ -1545,14 +1545,39 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="kc_competitorfromaudit">
+    <entity schema="kc_competitorfromaudit" haslabels="true">
       <properties>
         <property schema="createdon"/>
+        <property schema="kc_auditchecklistdetailid"/>
+        <property schema="kc_auditchecklistid"/>
         <property schema="kc_competitorfromauditid"/>
+        <property schema="kc_competitorid"/>
         <property schema="kc_name"/>
+        <property schema="kc_productcategoryid"/>
+        <property schema="kc_quantitysku"/>
         <property schema="modifiedon"/>
       </properties>
       <indexes>
+        <index schema="idx_kc_competitorfromaudit_kc_auditchecklistdetailid" issystem="true">
+          <fields>
+            <field schema="kc_auditchecklistdetailid"/>
+          </fields>
+        </index>
+        <index schema="idx_kc_competitorfromaudit_kc_auditchecklistid" issystem="true">
+          <fields>
+            <field schema="kc_auditchecklistid"/>
+          </fields>
+        </index>
+        <index schema="idx_kc_competitorfromaudit_kc_competitorid" issystem="true">
+          <fields>
+            <field schema="kc_competitorid"/>
+          </fields>
+        </index>
+        <index schema="idx_kc_competitorfromaudit_kc_productcategoryid" issystem="true">
+          <fields>
+            <field schema="kc_productcategoryid"/>
+          </fields>
+        </index>
         <index schema="idx_kc_competitorfromaudit_kc_name" issystem="true">
           <fields>
             <field schema="kc_name"/>

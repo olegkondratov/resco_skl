@@ -32,8 +32,8 @@
       <Height>64</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="kc_brandnameid">
-          <StyleName>primary</StyleName>
-          <Bounds>5,2,80,24</Bounds>
+          <StyleName>primary_center</StyleName>
+          <Bounds>5,20,80,24</Bounds>
           <CellKind>0</CellKind>
           <Anchor>4</Anchor>
         </CellTemplate>
