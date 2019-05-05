@@ -15,7 +15,7 @@
         <DetailItem SchemaName="kc_storeid"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeader="2" flexiOrientation="1">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="13" flexiHeader="2" flexiOrientation="1" DocCommands="0" FlipMode="224" ListCommands="5">
       <Name>Ассортимент</Name>
       <CustomName>Ассортимент</CustomName>
       <Binding SchemaName="kc_auditchecklistdetail.kc_auditchecklistid"/>

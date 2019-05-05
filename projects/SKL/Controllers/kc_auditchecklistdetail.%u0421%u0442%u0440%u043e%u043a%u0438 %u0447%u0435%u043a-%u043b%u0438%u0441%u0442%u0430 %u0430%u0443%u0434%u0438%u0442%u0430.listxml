@@ -6,26 +6,31 @@
   <Name>Строки чек-листа аудита</Name>
   <Kind>AssociatedList</Kind>
   <AutoWideWidth>0</AutoWideWidth>
-  <OrderBy>kc_name</OrderBy>
+  <OrderBy>kc_productcategoryid</OrderBy>
+  <SortAllowedFields>!</SortAllowedFields>
+  <FilterAllowedFields>!</FilterAllowedFields>
   <SerializedBindings>
     <string>kc_name</string>
     <string>kc_auditchecklistdetailid</string>
     <string>kc_productcategoryid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="kc_productcategoryid" method="Contains" reference="true"/>
+  </Search>
   <SerializedTemplates>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
-      <Width>320</Width>
+      <Width>160</Width>
       <Height>48</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="kc_productcategoryid">
-          <StyleName>primary</StyleName>
-          <Bounds>10,2,302,28</Bounds>
+          <StyleName>primary_center</StyleName>
+          <Bounds>10,0,140,48</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>15</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

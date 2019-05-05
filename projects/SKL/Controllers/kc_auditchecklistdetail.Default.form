@@ -16,7 +16,7 @@
           <IsConstant>true</IsConstant>
         </DetailItem>
         <DetailItem SchemaName="kc_productcategoryid">
-          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;filter entity="kc_productcategory"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="kc_productcategory"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="kc_productcategoryid" entityname="L0" operator="null"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="kc_auditchecklistdetail" alias="L0" from="kc_productcategoryid" to="kc_productcategoryid" link-type="outer"/&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
+          <LookupViews>&lt;extra&gt;&lt;actions&gt;0;;0&lt;/actions&gt;&lt;filter entity="kc_productcategory"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="kc_productcategory"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="kc_productcategoryid" entityname="L0" operator="null"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;link-entity name="kc_auditchecklistdetail" alias="L0" from="kc_productcategoryid" to="kc_productcategoryid" link-type="outer"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="kc_auditchecklistid" operator="eq" value="{{kc_auditchecklistid}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;</LookupViews>
         </DetailItem>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
           <IsConstant>true</IsConstant>

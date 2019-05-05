@@ -1255,7 +1255,7 @@
         <property schema="createdon"/>
         <property schema="createdonbehalfby"/>
         <property schema="importsequencenumber"/>
-        <property schema="kc_accountid"/>
+        <property schema="kc_accountid" fieldpermissions="Read"/>
         <property schema="kc_addess"/>
         <property schema="kc_areatvk"/>
         <property schema="kc_auditchecklistid"/>
@@ -1264,7 +1264,7 @@
         <property schema="kc_name"/>
         <property schema="kc_quantitycashbox"/>
         <property schema="kc_statuscode"/>
-        <property schema="kc_storeid"/>
+        <property schema="kc_storeid" fieldpermissions="Read"/>
         <property schema="kc_systemuserid"/>
         <property schema="kc_telephone"/>
         <property schema="kc_totalareastore"/>

@@ -7,7 +7,7 @@
   <Kind>List</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <AutoHeader>2</AutoHeader>
-  <OrderBy>kc_isinstock;kc_productcategoryid</OrderBy>
+  <OrderBy>!kc_isinstock;kc_productcategoryid</OrderBy>
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>kc_name</string>
