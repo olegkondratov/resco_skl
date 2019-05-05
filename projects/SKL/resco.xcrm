@@ -1,4 +1,4 @@
-﻿<model version="7" publish="10000">
+﻿<model version="7" publish="23">
   <entities>
     <entity schema="account" permissions="768" haslabels="true" xattr="768">
       <properties>
@@ -1265,7 +1265,6 @@
         <property schema="kc_quantitycashbox"/>
         <property schema="kc_statuscode"/>
         <property schema="kc_storeid" fieldpermissions="Read"/>
-        <property schema="kc_systemuserid"/>
         <property schema="kc_telephone"/>
         <property schema="kc_totalareastore"/>
         <property schema="modifiedby"/>
@@ -1311,11 +1310,6 @@
         <index schema="idx_kc_auditchecklist_kc_storeid" issystem="true">
           <fields>
             <field schema="kc_storeid"/>
-          </fields>
-        </index>
-        <index schema="idx_kc_auditchecklist_kc_systemuserid" issystem="true">
-          <fields>
-            <field schema="kc_systemuserid"/>
           </fields>
         </index>
         <index schema="idx_kc_auditchecklist_modifiedby" issystem="true">

@@ -768,7 +768,7 @@
           <Value>True</Value>
         </Property>
         <Property Name="LabelFontWeight" Type="System.Int32">
-          <Value>1</Value>
+          <Value>2</Value>
         </Property>
         <Property Name="LabelHorizontalAlignment" Type="System.Int32">
           <Value>1</Value>
