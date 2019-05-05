@@ -1,43 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>kc_auditchecklistdetail</EntityName>
   <CamelCase>kc_auditchecklistdetail</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Caption&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:Entity.kc_productcategoryid&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_quantitysku&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;Integer:0&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.kc_shareofshelf&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;ShareOfShelf&lt;/var&gt;&lt;func&gt;Division&lt;/func&gt;&lt;type&gt;Decimal&lt;/type&gt;&lt;arg&gt;var:Entity.kc_quantityskuskl&lt;/arg&gt;&lt;arg&gt;var:Entity.kc_quantitysku&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.kc_shareofshelf&lt;/var&gt;&lt;func&gt;Multiplication&lt;/func&gt;&lt;arg&gt;var:ShareOfShelf&lt;/arg&gt;&lt;arg&gt;Decimal:100&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_quantitysku&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_quantityskuskl&lt;/var&gt;&lt;op&gt;GreaterThan&lt;/op&gt;&lt;arg&gt;var:Entity.kc_quantitysku&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;saytext e="false"&gt;&lt;var&gt;&lt;/var&gt;&lt;text&gt;Кол-во SKU SKL не может быть больше общего кол-ва SKU&lt;/text&gt;&lt;/saytext&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.kc_quantityskuskl&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_quantitysku&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_quantityskuskl&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.kc_quantitysku.Validate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.kc_quantityskuskl.Validate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Form.kc_quantitysku.Validate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.kc_quantityskuskl.Validate&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <SharedVariableNames/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
-      <Name>General</Name>
+    <FormTab xsi:type="DetailTab" flexiHeader="0">
+      <Name>Сводка</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="kc_sellinskl" image="false" separator="false">
-          <IsConstant>false</IsConstant>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="kc_selloutskl" image="false" separator="false">
-          <IsConstant>false</IsConstant>
+        <DetailItem SchemaName="kc_productcategoryid"/>
+        <DetailItem separator="true" xsi:type="SeparatorDetailItem">
+          <IsConstant>true</IsConstant>
         </DetailItem>
-        <DetailItem SchemaName="kc_selloutstore" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="kc_shareofsale" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="kc_shareofshelf" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="kc_quantitysku" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="kc_quantityskuskl" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
-        <DetailItem SchemaName="kc_kep" image="false" separator="false">
-          <IsConstant>false</IsConstant>
-        </DetailItem>
+        <DetailItem SchemaName="kc_quantitysku" Style="NormalTop"/>
+        <DetailItem SchemaName="kc_quantityskuskl" Style="NormalTop"/>
+        <DetailItem SchemaName="kc_selloutstore" Style="NormalTop"/>
+        <DetailItem SchemaName="kc_selloutskl" Style="NormalTop"/>
+        <DetailItem SchemaName="kc_sellinskl" Style="NormalTop"/>
+        <DetailItem SchemaName="kc_shareofshelf" Style="NormalTop"/>
+        <DetailItem SchemaName="kc_shareofsale" Style="NormalTop"/>
+        <DetailItem SchemaName="kc_kep" Style="NormalTop"/>
       </SerializedChildren>
     </FormTab>
   </SerializedChildrenV2>
-  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
-    <Name>Navigation</Name>
-    <SerializedChildren />
-  </Navigation>
-  <PrimaryCommands>!defcmd</PrimaryCommands>
-  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
 </EntityForm>

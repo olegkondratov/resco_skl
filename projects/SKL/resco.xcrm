@@ -1363,7 +1363,7 @@
         <property schema="importsequencenumber"/>
         <property schema="kc_auditchecklistdetailid"/>
         <property schema="kc_auditchecklistid"/>
-        <property schema="kc_kep"/>
+        <property schema="kc_kep" fieldpermissions="Read"/>
         <property schema="kc_name"/>
         <property schema="kc_productcategoryid"/>
         <property schema="kc_quantitysku"/>
@@ -1371,8 +1371,8 @@
         <property schema="kc_sellinskl"/>
         <property schema="kc_selloutskl"/>
         <property schema="kc_selloutstore"/>
-        <property schema="kc_shareofsale"/>
-        <property schema="kc_shareofshelf"/>
+        <property schema="kc_shareofsale" fieldpermissions="Read"/>
+        <property schema="kc_shareofshelf" fieldpermissions="Read"/>
         <property schema="modifiedby"/>
         <property schema="modifiedon"/>
         <property schema="modifiedonbehalfby"/>

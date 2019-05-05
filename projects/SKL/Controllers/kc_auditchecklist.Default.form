@@ -5,7 +5,7 @@
   <PrimaryCommands>!defcmd</PrimaryCommands>
   <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
   <SerializedChildrenV2>
-    <FormTab xsi:type="DetailTab">
+    <FormTab xsi:type="DetailTab" flexiHeader="0">
       <Name>Сводка</Name>
       <SerializedChildren>
         <DetailItem separator="true" xsi:type="SeparatorDetailItem">
@@ -15,8 +15,9 @@
         <DetailItem SchemaName="kc_storeid"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab">
-      <Name>Строки чек-листа аудита List</Name>
+    <FormTab xsi:type="AssociatedTab" flexiHeader="2" flexiOrientation="1">
+      <Name>Ассортимент</Name>
+      <CustomName>Ассортимент</CustomName>
       <Binding SchemaName="kc_auditchecklistdetail.kc_auditchecklistid"/>
     </FormTab>
   </SerializedChildrenV2>
