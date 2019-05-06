@@ -1,4 +1,4 @@
-﻿<model version="7" publish="10000">
+﻿<model version="7" publish="23">
   <entities>
     <entity schema="account" permissions="768" haslabels="true" xattr="768">
       <properties>
@@ -1593,6 +1593,7 @@
         <property schema="kc_competitorinstoreid"/>
         <property schema="kc_name"/>
         <property schema="kc_productcategoryid"/>
+        <property schema="kc_quantitysku"/>
         <property schema="kc_storeid"/>
         <property schema="modifiedon"/>
       </properties>

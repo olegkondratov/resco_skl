@@ -17,6 +17,7 @@
     <string>createdon</string>
     <string>kc_name</string>
     <string>kc_accountid</string>
+    <string>kc_quantitysku</string>
     <string>kc_competitorid</string>
     <string>kc_competitorinstoreid</string>
     <string>kc_productcategoryid</string>
@@ -31,15 +32,35 @@
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
-      <Width>160</Width>
+      <Width>240</Width>
       <Height>48</Height>
       <Buttons>none</Buttons>
       <SerializedChildren>
         <CellTemplate SchemaName="kc_competitorid">
-          <StyleName>primary_center</StyleName>
-          <Bounds>10,12,140,24</Bounds>
+          <StyleName>input_filled</StyleName>
+          <Bounds>10,20,100,26</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>15</Anchor>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="kc_quantitysku">
+          <StyleName>input_filled</StyleName>
+          <Bounds>130,20,100,26</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Бренд:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray_italic</StyleName>
+          <Bounds>10,2,100,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Кол-во SKU:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray_italic</StyleName>
+          <Bounds>130,2,100,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>

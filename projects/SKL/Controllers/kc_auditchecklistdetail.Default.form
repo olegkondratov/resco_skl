@@ -31,7 +31,7 @@
         <DetailItem SchemaName="kc_kep" Style="NormalRed"/>
       </SerializedChildren>
     </FormTab>
-    <FormTab xsi:type="AssociatedTab" flexiHeight="0" flexiHeader="2" flexiOrientation="1" DocCommands="0" FlipMode="224" ListCommands="20">
+    <FormTab xsi:type="AssociatedTab" flexiHeight="6" flexiHeader="2" flexiOrientation="1" DocCommands="0" FlipMode="224" ListCommands="20">
       <Name>Конкуренты</Name>
       <CustomName>Конкуренты</CustomName>
       <Binding SchemaName="kc_competitorfromaudit.kc_auditchecklistdetailid"/>

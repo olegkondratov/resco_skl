@@ -1,38 +1,35 @@
 ﻿<EntityList>
   <Attributes>
     <EntityName>competitor</EntityName>
-    <CamelCase>Competitor</CamelCase>
-    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <CamelCase>competitor</CamelCase>
   </Attributes>
-  <Name>Конкуренты</Name>
-  <Kind>AssociatedList</Kind>
+  <Name>Lookup</Name>
+  <Kind>LookupList</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>name</OrderBy>
   <SortAllowedFields>!</SortAllowedFields>
   <FilterAllowedFields>!</FilterAllowedFields>
   <SerializedBindings>
-    <string>createdon</string>
-    <string>modifiedon</string>
     <string>competitorid</string>
     <string>name</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
-  <Search>
-    <attribute schema="name" method="Contains"/>
-  </Search>
+  <Fetch version="1.0">
+    <entity name="competitor"/>
+  </Fetch>
   <SerializedTemplates>
     <RowTemplate>
-      <DesignWidth>240</DesignWidth>
-      <DesignHeight>40</DesignHeight>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
       <Name>Default</Name>
-      <Width>160</Width>
+      <Width>240</Width>
       <Height>48</Height>
       <SerializedChildren>
         <CellTemplate SchemaName="name">
-          <StyleName>primary</StyleName>
-          <Bounds>10,12,140,24</Bounds>
+          <StyleName>primary_center_center</StyleName>
+          <Bounds>10,2,220,44</Bounds>
           <CellKind>0</CellKind>
-          <Anchor>13</Anchor>
+          <Anchor>12</Anchor>
         </CellTemplate>
       </SerializedChildren>
     </RowTemplate>
