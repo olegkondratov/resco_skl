@@ -71,7 +71,7 @@
       <SerializedChildren>
         <CellTemplate SchemaName="companyname">
           <StyleName>primary</StyleName>
-          <Bounds>68,2,242,24</Bounds>
+          <Bounds>68,2,236,24</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
@@ -84,20 +84,20 @@
         </CellTemplate>
         <CellTemplate SchemaName="fullname">
           <StyleName>Secondary</StyleName>
-          <Bounds>68,26,242,20</Bounds>
+          <Bounds>68,26,236,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>13</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="StatusTag">
           <IsConstant>true</IsConstant>
           <StyleName>ImageCellStyle</StyleName>
-          <Bounds>313,2,5,64</Bounds>
+          <Bounds>308,2,5,64</Bounds>
           <CellKind>1</CellKind>
           <Anchor>11</Anchor>
         </CellTemplate>
         <CellTemplate SchemaName="statecode">
           <StyleName>Secondary Right Green</StyleName>
-          <Bounds>68,46,242,20</Bounds>
+          <Bounds>68,46,236,20</Bounds>
           <CellKind>0</CellKind>
           <Anchor>9</Anchor>
         </CellTemplate>

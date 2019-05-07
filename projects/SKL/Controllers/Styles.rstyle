@@ -291,6 +291,9 @@
         <Property Name="FontSize" Type="System.Single">
           <Value>9</Value>
         </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
       </Properties>
     </Style>
     <Style Name="Secondary Right Red" Style="Secondary Right" Type="TextCell">
@@ -300,6 +303,9 @@
         </Property>
         <Property Name="FontSize" Type="System.Single">
           <Value>9</Value>
+        </Property>
+        <Property Name="VerticalAlignment" Type="System.Int32">
+          <Value>1</Value>
         </Property>
       </Properties>
     </Style>
