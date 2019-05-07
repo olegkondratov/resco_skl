@@ -9,10 +9,12 @@
   <OrderBy>kc_productcategoryid</OrderBy>
   <SortAllowedFields>!</SortAllowedFields>
   <FilterAllowedFields>!</FilterAllowedFields>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>kc_name</string>
     <string>kc_auditchecklistdetailid</string>
     <string>kc_productcategoryid</string>
+    <string>kc_auditchecklistid</string>
   </SerializedBindings>
   <MaxColumns>0</MaxColumns>
   <Search>
@@ -25,6 +27,7 @@
       <Name>Default</Name>
       <Width>160</Width>
       <Height>48</Height>
+      <Buttons>none</Buttons>
       <SerializedChildren>
         <CellTemplate SchemaName="kc_productcategoryid">
           <StyleName>primary_center</StyleName>
