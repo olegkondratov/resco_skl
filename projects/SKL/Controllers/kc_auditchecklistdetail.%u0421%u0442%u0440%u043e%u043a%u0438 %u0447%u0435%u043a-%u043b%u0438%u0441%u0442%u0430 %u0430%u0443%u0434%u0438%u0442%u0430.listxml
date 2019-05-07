@@ -12,6 +12,7 @@
   <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
   <SerializedBindings>
     <string>kc_name</string>
+    <string>statecode</string>
     <string>kc_auditchecklistdetailid</string>
     <string>kc_productcategoryid</string>
     <string>kc_auditchecklistid</string>
