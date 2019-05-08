@@ -3,7 +3,7 @@
     <EntityName>kc_competitorfromaudit</EntityName>
     <CamelCase>kc_competitorfromaudit</CamelCase>
   </Attributes>
-  <Name>Конкуренты по результатам аудита</Name>
+  <Name>Disabled</Name>
   <Kind>AssociatedList</Kind>
   <AutoWideWidth>0</AutoWideWidth>
   <OrderBy>kc_competitorid</OrderBy>
@@ -23,42 +23,6 @@
   <ListOnSaveRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;definition e="false"&gt;&lt;var&gt;AuditChecklistDetail&lt;/var&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;var:Entity.kc_auditchecklistdetailid&lt;/arg&gt;&lt;arg&gt;String:kc_auditchecklistdetail&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.kc_auditchecklistid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:AuditChecklistDetail.kc_auditchecklistid&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.kc_productcategoryid&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:AuditChecklistDetail.kc_productcategoryid&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="Check competitor and quantity is not null" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="Or"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_competitorid&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_quantitysku&lt;/var&gt;&lt;op&gt;DoesNotContainData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;ErrorMessage&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Необходимо заполнить конкурента и кол-во SKU&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;double&lt;/var&gt;&lt;func&gt;LoadFetch&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;String:competitor&lt;/arg&gt;&lt;arg&gt;Fetch:&amp;lt;fetch version=&amp;quot;1.0&amp;quot; count=&amp;quot;1&amp;quot;&amp;gt;&amp;lt;entity name=&amp;quot;competitor&amp;quot;&amp;gt;&amp;lt;link-entity name=&amp;quot;kc_competitorfromaudit&amp;quot; alias=&amp;quot;L0&amp;quot; from=&amp;quot;kc_competitorid&amp;quot; to=&amp;quot;competitorid&amp;quot; link-type=&amp;quot;inner&amp;quot;&amp;gt;&amp;lt;filter type=&amp;quot;and&amp;quot;&amp;gt;&amp;lt;condition attribute=&amp;quot;kc_auditchecklistdetailid&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;{{Entity.kc_auditchecklistdetailid}}&amp;quot;/&amp;gt;&amp;lt;condition attribute=&amp;quot;kc_competitorid&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;{{Entity.kc_competitorid}}&amp;quot;/&amp;gt;&amp;lt;condition attribute=&amp;quot;kc_productcategoryid&amp;quot; operator=&amp;quot;eq&amp;quot; value=&amp;quot;{{Entity.kc_productcategoryid}}&amp;quot;/&amp;gt;&amp;lt;condition attribute=&amp;quot;kc_competitorid&amp;quot; operator=&amp;quot;not-null&amp;quot;/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/link-entity&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/arg&gt;&lt;/definition&gt;&lt;branch e="true" info="Check double of competitor" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_competitorid&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;var:double.@this&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;ErrorMessage&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Этот конкурент уже был указан&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.kc_competitorid&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Entity.kc_quantitysku&lt;/var&gt;&lt;func&gt;Clear&lt;/func&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</ListOnSaveRule>
   <TemplateSelectorRule>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="false" info="Set style kc_competitorid" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_competitorid&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row.kc_competitorid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:input_filled&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row.kc_competitorid.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:input_empty&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="false" info="Set style kc_quantitysku" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.kc_quantitysku&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row.kc_quantitysku.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:input_filled&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Row.kc_quantitysku.Style&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:input_empty&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</TemplateSelectorRule>
   <SerializedTemplates>
-    <RowTemplate>
-      <DesignWidth>320</DesignWidth>
-      <DesignHeight>48</DesignHeight>
-      <Name>Editable</Name>
-      <Width>240</Width>
-      <Height>48</Height>
-      <Buttons>Delete</Buttons>
-      <SerializedChildren>
-        <CellTemplate SchemaName="kc_competitorid">
-          <StyleName>input_filled</StyleName>
-          <Bounds>10,20,100,26</Bounds>
-          <CellKind>3</CellKind>
-          <Anchor>4</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="kc_quantitysku">
-          <StyleName>input_filled</StyleName>
-          <Bounds>130,20,100,26</Bounds>
-          <CellKind>3</CellKind>
-          <Anchor>4</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="Кол-во SKU:">
-          <IsConstant>true</IsConstant>
-          <StyleName>gray_italic</StyleName>
-          <Bounds>130,2,100,16</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>4</Anchor>
-        </CellTemplate>
-        <CellTemplate SchemaName="Бренд:">
-          <IsConstant>true</IsConstant>
-          <StyleName>gray_italic</StyleName>
-          <Bounds>10,2,100,16</Bounds>
-          <CellKind>0</CellKind>
-          <Anchor>4</Anchor>
-        </CellTemplate>
-      </SerializedChildren>
-    </RowTemplate>
     <RowTemplate>
       <DesignWidth>320</DesignWidth>
       <DesignHeight>48</DesignHeight>

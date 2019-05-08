@@ -29,5 +29,9 @@
       <Name>Чек-листы аудита List</Name>
       <Binding SchemaName="kc_auditchecklist.kc_storeid"/>
     </FormTab>
+    <FormTab xsi:type="IFrameTab">
+      <Name>Web</Name>
+      <Url>file://pollIndex.html</Url>
+    </FormTab>
   </SerializedChildrenV2>
 </EntityForm>
