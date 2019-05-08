@@ -929,5 +929,15 @@
         </Property>
       </Properties>
     </Style>
+    <Style Name="GrayTag" Style="ImageCellStyle" Type="ImageCell">
+      <Properties>
+        <Property Name="ForeColor" Type="System.Int32">
+          <Value>0</Value>
+        </Property>
+        <Property Name="BackColor" Type="System.Int32">
+          <Value>-2147483648</Value>
+        </Property>
+      </Properties>
+    </Style>
   </Styles>
 </GlobalStyles>

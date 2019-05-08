@@ -1,4 +1,4 @@
-﻿<EntityForm xsi:dummy="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
   <IsContactForm>false</IsContactForm>
   <EntityName>kc_auditchecklist</EntityName>
   <CamelCase>kc_auditchecklist</CamelCase>
@@ -28,14 +28,13 @@
         </DetailItem>
         <DetailItem SchemaName="kc_totalareastore" Style="NormalRed"/>
         <DetailItem SchemaName="kc_areatvk" Style="NormalRed"/>
-        <DetailItem SchemaName="kc_quantitycashbox" Style="NormalRed"/>
         <DetailItem SchemaName="kc_telephone" Style="NormalRed"/>
         <DetailItem SchemaName="kc_addess"/>
       </SerializedChildren>
     </FormTab>
     <FormTab xsi:type="AssociatedTab" flexiHeight="13" flexiHeader="2" flexiOrientation="1" DocCommands="0" FlipMode="224" ListCommands="5">
-      <Name>Ассортимент</Name>
-      <CustomName>Ассортимент</CustomName>
+      <Name>Ассортимент ТТ</Name>
+      <CustomName>Ассортимент ТТ</CustomName>
       <Binding SchemaName="kc_auditchecklistdetail.kc_auditchecklistid"/>
     </FormTab>
   </SerializedChildrenV2>
