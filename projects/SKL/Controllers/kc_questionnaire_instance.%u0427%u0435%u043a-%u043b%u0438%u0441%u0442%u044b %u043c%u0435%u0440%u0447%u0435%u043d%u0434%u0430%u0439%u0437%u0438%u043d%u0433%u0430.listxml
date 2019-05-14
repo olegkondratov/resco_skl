@@ -1,0 +1,56 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>kc_questionnaire_instance</EntityName>
+    <CamelCase>kc_questionnaire_instance</CamelCase>
+  </Attributes>
+  <Name>Чек-листы мерчендайзинга</Name>
+  <Kind>AssociatedList</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>!createdon</OrderBy>
+  <SortAllowedFields>!</SortAllowedFields>
+  <FilterAllowedFields>!</FilterAllowedFields>
+  <SerializedBindings>
+    <string>createdon</string>
+    <string>kc_name</string>
+    <string>kc_questionnaire_instanceid</string>
+    <string>ownerid</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="createdon">
+          <StyleName>input_filled</StyleName>
+          <Bounds>8,24,144,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="ownerid">
+          <StyleName>input_filled</StyleName>
+          <Bounds>160,24,144,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Дата заполнения:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray_italic</StyleName>
+          <Bounds>8,4,144,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="ФИО заполнившего:">
+          <IsConstant>true</IsConstant>
+          <StyleName>gray_italic</StyleName>
+          <Bounds>160,4,144,16</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>4</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

@@ -2478,16 +2478,28 @@
       <properties>
         <property schema="createdon"/>
         <property schema="kc_name"/>
+        <property schema="kc_productcategoryid"/>
         <property schema="kc_questionnaire_instanceid"/>
         <property schema="kc_questionnaire_templateid"/>
+        <property schema="kc_storeid"/>
         <property schema="kc_summaryscore"/>
         <property schema="modifiedon"/>
         <property schema="ownerid"/>
       </properties>
       <indexes>
+        <index schema="idx_kc_questionnaire_instance_kc_productcategoryid" issystem="true">
+          <fields>
+            <field schema="kc_productcategoryid"/>
+          </fields>
+        </index>
         <index schema="idx_kc_questionnaire_instance_kc_questionnaire_templateid" issystem="true">
           <fields>
             <field schema="kc_questionnaire_templateid"/>
+          </fields>
+        </index>
+        <index schema="idx_kc_questionnaire_instance_kc_storeid" issystem="true">
+          <fields>
+            <field schema="kc_storeid"/>
           </fields>
         </index>
         <index schema="idx_kc_questionnaire_instance_ownerid" issystem="true">
@@ -2565,10 +2577,16 @@
       <properties>
         <property schema="createdon"/>
         <property schema="kc_name"/>
+        <property schema="kc_productcategoryid"/>
         <property schema="kc_questionnaire_templateid"/>
         <property schema="modifiedon"/>
       </properties>
       <indexes>
+        <index schema="idx_kc_questionnaire_template_kc_productcategoryid" issystem="true">
+          <fields>
+            <field schema="kc_productcategoryid"/>
+          </fields>
+        </index>
         <index schema="idx_kc_questionnaire_template_kc_name" issystem="true">
           <fields>
             <field schema="kc_name"/>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Опросы</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
+	<script src="../js/bridge.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap-select.min.js"></script>
+	<script src="../css/bootstrap-select.min.css"></script>
+	<link rel='stylesheet' href='normalize.min.css'>
+	<link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+		<form id="form1">
+			<div class="row">
+				<h4>Выберете опрос</h4>
+				<div class="input-group">
+					<select id="template" class="selectpicker">
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-group">
+					<input class="button" type="button" value="Выбрать" onclick="select_questionnaire_template()">
+				</div>
+			</div>
+		</form>
+		<form id="form2" style="display: none">
+		</form>
+	<script src="script.js"></script>
+</body>
+</html>
