@@ -96,8 +96,8 @@
         <property schema="kc_abcpotencialcode" fieldpermissions="Read"/>
         <property schema="kc_accountworkcode"/>
         <property schema="kc_addressoffice"/>
-        <property schema="kc_amountfactsku"/>
-        <property schema="kc_amountplansku"/>
+        <property schema="kc_amountfactsku" fieldpermissions="Read"/>
+        <property schema="kc_amountplansku" fieldpermissions="Read"/>
         <property schema="kc_amountsellin"/>
         <property schema="kc_areastorage"/>
         <property schema="kc_birthday"/>
@@ -107,7 +107,7 @@
         <property schema="kc_countryid" fieldpermissions="Read"/>
         <property schema="kc_customertypecode" fieldpermissions="Read"/>
         <property schema="kc_datechangestage"/>
-        <property schema="kc_datemodifiedmatrix"/>
+        <property schema="kc_datemodifiedmatrix" fieldpermissions="Read"/>
         <property schema="kc_dateplanchangestage"/>
         <property schema="kc_daterework"/>
         <property schema="kc_dateshipment"/>
@@ -133,7 +133,7 @@
         <property schema="kc_namesupplierid"/>
         <property schema="kc_optionalstatuscode"/>
         <property schema="kc_pkbstatuscode"/>
-        <property schema="kc_planfactsku"/>
+        <property schema="kc_planfactsku" fieldpermissions="Read"/>
         <property schema="kc_plantotalselloutskl" fieldpermissions="Read"/>
         <property schema="kc_plumbingandaccessoriescode"/>
         <property schema="kc_pricesegmentcode"/>
@@ -1879,7 +1879,7 @@
         </index>
       </indexes>
     </entity>
-    <entity schema="kc_matrixdetail" haslabels="true">
+    <entity schema="kc_matrixdetail" permissions="768" haslabels="true" xattr="768">
       <properties>
         <property schema="createdby"/>
         <property schema="createdon"/>
@@ -2038,7 +2038,6 @@
         <property schema="kc_storageid"/>
         <property schema="kc_storeid"/>
         <property schema="kc_sum"/>
-        <property schema="kc_umvat"/>
         <property schema="modifiedby"/>
         <property schema="modifiedon"/>
         <property schema="modifiedonbehalfby"/>
@@ -2766,18 +2765,18 @@
         <property schema="kc_accountid"/>
         <property schema="kc_address"/>
         <property schema="kc_addressdescription"/>
-        <property schema="kc_amountfactsku"/>
-        <property schema="kc_amountplansku"/>
+        <property schema="kc_amountfactsku" fieldpermissions="Read"/>
+        <property schema="kc_amountplansku" fieldpermissions="Read"/>
         <property schema="kc_amountsellin"/>
         <property schema="kc_areaplumbing"/>
         <property schema="kc_businessunitid"/>
         <property schema="kc_dadataregion"/>
         <property schema="kc_datelastshipment"/>
         <property schema="kc_datelastvisit"/>
-        <property schema="kc_datemodifiedmatrix"/>
+        <property schema="kc_datemodifiedmatrix" fieldpermissions="Read"/>
         <property schema="kc_daterework"/>
         <property schema="kc_datestartshipment"/>
-        <property schema="kc_datevalidation"/>
+        <property schema="kc_datevalidation" fieldpermissions="Read"/>
         <property schema="kc_emailaddress"/>
         <property schema="kc_emailaddress2"/>
         <property schema="kc_factsellout"/>
@@ -2794,7 +2793,7 @@
         <property schema="kc_onlinestore"/>
         <property schema="kc_originatingleadid"/>
         <property schema="kc_otherphone"/>
-        <property schema="kc_planfactsku"/>
+        <property schema="kc_planfactsku" fieldpermissions="Read"/>
         <property schema="kc_plantotalselloutskl"/>
         <property schema="kc_pricesegmentcode"/>
         <property schema="kc_ratedsalevolumesellout"/>
@@ -2807,7 +2806,7 @@
         <property schema="kc_telephone"/>
         <property schema="kc_totalareastore"/>
         <property schema="kc_totalpotentialsellinskl"/>
-        <property schema="kc_validationuserid"/>
+        <property schema="kc_validationuserid" fieldpermissions="Read"/>
         <property schema="modifiedby"/>
         <property schema="modifiedon"/>
         <property schema="modifiedonbehalfby"/>
@@ -4259,7 +4258,6 @@
         <property schema="resco_folder"/>
         <property schema="resco_issnippet"/>
         <property schema="resco_istemplate"/>
-        <property schema="resco_langaugecode"/>
         <property schema="resco_languagecode"/>
         <property schema="resco_name"/>
         <property schema="resco_options"/>

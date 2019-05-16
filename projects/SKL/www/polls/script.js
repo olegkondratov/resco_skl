@@ -1,28 +1,46 @@
-var entity = new MobileCRM.FetchXml.Entity("kc_questionnaire_template");
-entity.addAttribute("kc_questionnaire_templateid");
-entity.addAttribute("kc_name");
-var fetch = new MobileCRM.FetchXml.Fetch(entity);
-fetch.execute(
-	"Array",
-	function (result) {
-		for (var i in result) {
-			var template = result[i];
-			var select = document.getElementById('template');
-			var opt = document.createElement('option');
-			opt.value = template[0];
-			opt.innerHTML = template[1];
-			select.appendChild(opt);
-		}
+var kc_productcategoryid = null;
+var kc_storeid = null;
+
+MobileCRM.UI.EntityForm.requestObject(
+	function (entityForm) {
+		var entityParent = entityForm.entity;
+		kc_productcategoryid = entityParent.properties.kc_productcategoryid;
+		kc_storeid = entityParent.properties.kc_storeid;
+		var entity = new MobileCRM.FetchXml.Entity("kc_questionnaire_template");
+		entity.addAttribute("kc_questionnaire_templateid");
+		entity.addAttribute("kc_name");
+		entity.filter = new MobileCRM.FetchXml.Filter();
+		entity.filter.where("kc_productcategoryid", "eq", kc_productcategoryid.id);
+		var fetch = new MobileCRM.FetchXml.Fetch(entity);
+		fetch.execute(
+			"Array",
+			function (result) {
+				for (var i in result) {
+					var template = result[i];
+					var select = document.getElementById('template');
+					var opt = document.createElement('option');
+					opt.value = template[0];
+					opt.innerHTML = template[1];
+					select.appendChild(opt);
+				}
+			},
+			function (err) {
+				MobileCRM.bridge.alert("Ошибка при запросе шаблонов опросов: " + err);
+			},
+			null
+			);
+		return true;
 	},
 	function (err) {
-		MobileCRM.bridge.alert("Ошибка при запросе шаблонов опросов: " + err);
-	},
-	null
+		MobileCRM.bridge.alert("Ошибка при получении товарной категории: " + err);
+	},null
 );
 
 var questions = [];
 
 function select_questionnaire_template() {
+	var datepicker = [];
+	var datetimepicker = [];
 	var select = document.getElementById('template');
 	var templateId = select.options[select.selectedIndex].value;
 	var entity_question = new MobileCRM.FetchXml.Entity("kc_questionnaire_question");
@@ -51,21 +69,23 @@ function select_questionnaire_template() {
 					html += "<h5>" + question[2] + "</h5>";
 					placeholder = question[2];
 				}
-				html += "<div class='input-group'>";
+				html += "<div class='form-group'>";
 				if (question[3] == 1) {
-					html += "<input id='" + question[0] + "' type='text' placeholder='" + placeholder + "'>"
+					html += "<input id='" + question[0] + "' type='text' placeholder='" + placeholder + "' class='form-control'>"
 				}
 				if (question[3] == 2) {
-					html += "<input id='" + question[0] + "' type='number' step='1' placeholder='" + placeholder + "'>"
+					html += "<input id='" + question[0] + "' type='number' step='1' placeholder='" + placeholder + "' class='form-control'>"
 				}
 				if (question[3] == 3) {
-					html += "<input id='" + question[0] + "' type='number' placeholder='" + placeholder + "'>"
+					html += "<input id='" + question[0] + "' type='number' placeholder='" + placeholder + "' class='form-control'>"
 				}
 				if (question[3] == 4) {
-					html += "<input id='" + question[0] + "' type='date' placeholder='" + placeholder + "'>"
+					html += "<input id='" + question[0] + "' type='text' placeholder='" + placeholder + "' class='form-control'>"
+					datepicker.push(question[0]);
 				}
 				if (question[3] == 5) {
-					html += "<input id='" + question[0] + "' type='datetime-local' placeholder='" + placeholder + "'>"
+					html += "<input id='" + question[0] + "' type='text' placeholder='" + placeholder + "' class='form-control'>"
+					datetimepicker.push(question[0]);
 				}
 				if (question[3] == 6) {	
 					var optionId = question[0];
@@ -144,22 +164,28 @@ function select_questionnaire_template() {
 					);					
 				}
 				if (question[3] == 8) {
-					html += "<input type='radio' name='" + question[0] + "' value='true' id='" + question[0] + "_true'/> \
-							<label for='" + question[0] + "_true'>Да</label> \
-							<input type='radio' name='" + question[0] + "' value='false' id='" + question[0] + "_false' checked='true'/> \
-							<label for='" + question[0] + "_false'>Нет</label>";
+					html += "<input type='checkbox' data-toggle='toggle' data-on='Да' data-off='Нет' id='" + question[0] + "'/>";
 				}
 				html += "</div> \
 					</div>";
 			}
-			html += "<div class='row'> \
-					<div class='input-group'> \
-						<input class='button' type='button' value='Готово' onclick='createInstance()'> \
-					</div> \
-				</div>";
+			html += "<input type='button' value='Готово' onclick='createInstance()' class='btn btn-light'>";
 			document.getElementById("form2").innerHTML += html;
 			document.getElementById("form1").style.display="none";
 			document.getElementById("form2").style.display="block";
+			datepicker.forEach(function(element) {
+				$('#' + element).datetimepicker({
+                    format: 'DD.MM.YYYY',
+					locale: 'ru'
+                });
+			});
+			datetimepicker.forEach(function(element) {
+				$('#' + element).datetimepicker({
+					locale: 'ru'
+                });
+			});
+			$('select').selectpicker();
+			$(':checkbox').bootstrapToggle();
 		},
 		function (err) {
 			MobileCRM.bridge.alert("Ошибка при запросе вопросов: " + err);
@@ -207,7 +233,7 @@ function createInstance() {
 			}
 		}
 		else {
-			var val = document.getElementById(element.id + "_true").checked;				
+			var val = document.getElementById(element.id).checked;				
 			if (val) {
 				globalScore += Number(element.score);
 			}
@@ -221,6 +247,8 @@ function createInstance() {
 	var instance = MobileCRM.DynamicEntity.createNew("kc_questionnaire_instance");
 	var instance_props = instance.properties;
 	instance_props.kc_questionnaire_templateid = new MobileCRM.Reference("kc_questionnaire_template", templateId);
+	instance_props.kc_productcategoryid = new MobileCRM.Reference("kc_productcategory", kc_productcategoryid.id);
+	instance_props.kc_storeid = new MobileCRM.Reference("kc_store", kc_storeid.id);
 	instance_props.kc_name = templateName;
 	instance_props.kc_summaryscore = Number(globalScore);
 	instance.save(
@@ -297,7 +325,7 @@ function createInstance() {
 						}
 					}
 					if (element.type == 8) {
-						var val = document.getElementById(element.id + "_true").checked;				
+						var val = document.getElementById(element.id).checked;				
 						if (val)
 						{
 							answer_props.kc_value_boolean = val;

@@ -8,28 +8,37 @@
 	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
 	<script src="../js/bridge.js"></script>
 	<script src="../js/jquery.js"></script>
+	<script src="../js/moment-with-locales.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/bootstrap-select.min.js"></script>
-	<script src="../css/bootstrap-select.min.css"></script>
-	<link rel='stylesheet' href='normalize.min.css'>
+	<script src="../js/bootstrap-toggle.min.js"></script>
+	<script src="../js/bootstrap-datetimepicker.min.js"></script>
 	<link rel='stylesheet' href='styles.css'>
+	<link rel='stylesheet' href='../css/bootstrap.min.css'>
+	<link rel='stylesheet' href='../css/bootstrap-select.min.css'>
+	<link rel='stylesheet' href='../css/bootstrap-toggle.min.css'>
+	<link rel='stylesheet' href='../css/bootstrap-datetimepicker.min.css'>
+	<link rel='stylesheet' href='normalize.min.css'>
 </head>
 <body>
-		<form id="form1">
-			<div class="row">
-				<h4>Выберете опрос</h4>
-				<div class="input-group">
-					<select id="template" class="selectpicker">
-					</select>
-				</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<form id="form1">
+				<div class="row">
+					<h4>Выберете опрос</h4>
+					<div class="form-group">
+						<select id="template" class="selectpicker">
+						</select>
+					</div>
+					<input type="button" value="Выбрать" onclick="select_questionnaire_template()" class="btn btn-light">
+					</div>
+				</form>
+				<form id="form2" style="display: none">
+				</form>
 			</div>
-			<div class="row">
-				<div class="input-group">
-					<input class="button" type="button" value="Выбрать" onclick="select_questionnaire_template()">
-				</div>
-			</div>
-		</form>
-		<form id="form2" style="display: none">
-		</form>
-	<script src="script.js"></script>
+		</div>
+	</div>
+<script src="script.js"></script>
 </body>
 </html>
