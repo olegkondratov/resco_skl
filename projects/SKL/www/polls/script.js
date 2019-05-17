@@ -22,6 +22,7 @@ MobileCRM.UI.EntityForm.requestObject(
 					opt.value = template[0];
 					opt.innerHTML = template[1];
 					select.appendChild(opt);
+					$('#template').selectpicker('refresh');
 				}
 			},
 			function (err) {
@@ -291,7 +292,8 @@ function createInstance() {
 						var val = document.getElementById(element.id).value;				
 						if (val)
 						{
-							answer_props.kc_value_date = val;
+							var d = new Date(val.replace(/(\d+)\.(\d+)\.(\d+)/, '$2/$1/$3'));
+							answer_props.kc_value_date = d.toISOString();
 							answer_props.kc_score = element.score;
 						}
 					}
